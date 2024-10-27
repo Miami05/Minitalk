@@ -46,7 +46,7 @@ Minitalk is a simple inter-process communication project that allows two program
 
 ### Compile the project using Make:
 
-    ```
+    ```bash
     make
     ```
 
