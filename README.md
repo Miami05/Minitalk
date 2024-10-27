@@ -46,9 +46,9 @@ Minitalk is a simple inter-process communication project that allows two program
 
 ## Compile the project using Make:
 
-    ```
+    ```bash
     make
-    ```
+
 1. This will generate two executables: server and client
 
 ## Usage
