@@ -75,7 +75,7 @@ In another terminal, run the client by providing the server's PID and the messag
 
 1. Start the server:
 
-    ```
+    ```bash
     ./server
     
 2. Get the server PID (displayed in the terminal).
@@ -84,7 +84,6 @@ In another terminal, run the client by providing the server's PID and the messag
 
     ```
     ./client <PID> "Hello, Server!"
-    
 
 ## Contributing
 
