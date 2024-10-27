@@ -2,6 +2,18 @@
 The purpose of this project is to code a small data exchange program using UNIX signals.
 Minitalk is a simple inter-process communication project that allows two programs to communicate using signals in C. This project serves as an introduction to Unix signals and IPC (Inter-Process Communication) mechanisms.
 
+## Table of Contents
+
+- [Features](#features)
+- [Bonus Features](#bonus-features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Example](#example)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
 ## Features
 
 - **Client-Server Architecture**: A client can send messages to a server using signals.
