@@ -77,7 +77,7 @@ Replace <PID> with the server process ID, which is displayed in the terminal whe
 
     ```
     ./server
-    ```
+    ``
 2. Get the server PID (displayed in the terminal).
 
 3. Send a message from the client:
