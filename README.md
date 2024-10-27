@@ -44,31 +44,31 @@ Minitalk is a simple inter-process communication project that allows two program
    cd minitalk
    ```
 
-### Compile the project using Make:
+## Compile the project using Make:
 
     ```bash
     make
     ```
-
 1. This will generate two executables: server and client
 
 ## Usage
 
-### Starting the Server
+## Starting the Server
 
 Open a terminal and run the server:
 
     ```bash
     ./server
     ```
-### Running the Client
+
+## Running the Client
 
 In another terminal, run the client by providing the server's PID and the message to send:
 
     ```bash
     ./client <PID> "your_message_here"
     ```
-1. Replace <PID> with the server process ID, which is displayed in the terminal where the server is running.
+Replace <PID> with the server process ID, which is displayed in the terminal where the server is running.
 
 ## Example
 
