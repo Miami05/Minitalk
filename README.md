@@ -66,7 +66,7 @@ Open a terminal and run the server:
 
 In another terminal, run the client by providing the server's PID and the message to send:
 
-    ```
+    ```bash
     ./client <PID> "your_message_here"
     ```
 1. Replace <PID> with the server process ID, which is displayed in the terminal where the server is running.
@@ -82,7 +82,7 @@ In another terminal, run the client by providing the server's PID and the messag
 
 3. Send a message from the client:
 
-    ```
+    ```bash
     ./client <PID> "Hello, Server!"
 
 ## Contributing
