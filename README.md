@@ -20,5 +20,7 @@ Minitalk is a simple inter-process communication project that allows two program
 1. Clone the repository:
    ```bash
    git clone https://github.com/Miami05/minitalk.git
+   ```
+   ```
    cd minitalk
-
+   ```
