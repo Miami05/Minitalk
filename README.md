@@ -44,7 +44,7 @@ Minitalk is a simple inter-process communication project that allows two program
    cd minitalk
    ```
 
-## Compile the project using Make:
+### Compile the project using Make:
 
     make
 
@@ -56,17 +56,15 @@ Minitalk is a simple inter-process communication project that allows two program
 
 Open a terminal and run the server:
 
-    ```
+    
     ./server
-    ```
 
 ## Running the Client
 
 In another terminal, run the client by providing the server's PID and the message to send:
 
-    ```
     ./client <PID> "your_message_here"
-    ```
+
 Replace <PID> with the server process ID, which is displayed in the terminal where the server is running.
 
 ## Example
