@@ -6,11 +6,20 @@
 /*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 15:42:25 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/27 23:54:06 by ledio            ###   ########.fr       */
+/*   Updated: 2024/12/08 17:14:33 by ledio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk_bonus.h"
+
+/**
+ * print_server - Displays a styled server banner with the PID.
+ * @pid: The process ID of the server to display.
+ * 
+ * This function prints a visually formatted banner using colors and
+ * decorations, followed by the server's process ID, providing a 
+ * clear and aesthetic representation of the server information.
+ */
 
 void	print_server(int pid)
 {
@@ -23,6 +32,16 @@ void	print_server(int pid)
 	ft_printf("%s\n\t\tPID: %d%s\t\t%sServer Banner%s\n", YELLOW, pid, END, DARK_BLUE, END);
 	ft_printf("\t────────────────────────────────────────────\n\n");
 }
+
+/**
+ * convert_bits - Converts a binary string to a character.
+ * @buffer: Array of '0' and '1' characters representing binary data.
+ * 
+ * This function processes an 8-character binary string, converting it 
+ * into its equivalent ASCII character by shifting bits appropriately.
+ * 
+ * Return: The ASCII character corresponding to the binary string.
+ */
 
 char	convert_bits(char buffer[])
 {
@@ -40,6 +59,16 @@ char	convert_bits(char buffer[])
 	return (c);
 }
 
+/**
+ * process_bits - Handles a received character from the client.
+ * @client_pid: Pointer to the client's process ID.
+ * @c: The received character to process.
+ * 
+ * If the character is the null terminator, it signals the client
+ * that the transmission is complete. Otherwise, it prints the character
+ * to standard output.
+ */
+
 void	proccess_bits(__pid_t *client_pid, char c)
 {
 	if (c == '\0')
@@ -52,6 +81,17 @@ void	proccess_bits(__pid_t *client_pid, char c)
 	else
 		write(1, &c, 1);
 }
+
+/**
+ * signal_handler - Handles incoming signals to process binary data.
+ * @signal: The signal number received (SIGUSR1 or SIGUSR2).
+ * @info: Pointer to a siginfo_t struct with sender information.
+ * @context: Context pointer (unused in this implementation).
+ * 
+ * This function processes signals as binary input ('1' for SIGUSR1, 
+ * '0' for SIGUSR2), builds characters from 8 bits, and handles them 
+ * 
+ * */
 
 void	signal_handler(int signal, siginfo_t *info, void *context)
 {
@@ -78,6 +118,15 @@ void	signal_handler(int signal, siginfo_t *info, void *context)
 	if (client_pid != 0)
 		kill(client_pid, SIGUSR1);
 }
+
+/**
+ * main - Entry point for the server program.
+ * 
+ * Sets up the signal handlers for SIGUSR1 and SIGUSR2, displays the 
+ * server banner, and enters an infinite loop to wait for signals.
+ * 
+ * Return: Always 0 (success).
+ */
 
 int	main(void)
 {
